@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="nl">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <title>eWeather - Actueel</title>
-</head>
+@section('title', 'Actueel')
 
-<body>
+@section('content')
     <h1>Actuele metingen</h1>
 
     <table>
@@ -25,6 +21,4 @@
         </tr>
         @endforeach
     </table>
-</body>
-
-</html>
+@endsection
