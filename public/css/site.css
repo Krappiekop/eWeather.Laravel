@@ -1,0 +1,290 @@
+/* Vaste kleuren omgezet in variabelen */
+:root {
+  --cyan: #4ad6ed;
+  --yellow: #ffed00;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/helvetica-neue.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 16px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow:
+    0 0 0 0.1rem white,
+    0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0077cc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* Witte navigation bar waar logo in staat met een blauwe border bovenaan */
+.navbar {
+  background-color: var(--white);
+  border-top: 10px solid var(--cyan);
+}
+
+/* Max grotte van logo */
+.logo {
+  height: 70px;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: Arial;
+}
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* de form waar de stad keuze knop in staat */
+.form-stad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Keuze meetstation knop uiterlijk */
+.dropdown-stad {
+  height: 50px;
+  width: 70%;
+  padding-left: 25px;
+  background-color: var(--white);
+  border-radius: 25px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  font-family: "Helvetica Neue", Arial;
+  font-size: 18px;
+}
+
+.button-stad {
+  border-radius: 5px;
+  background-color: var(--white);
+  border: 1px solid;
+  font-family: "Helvetica Neue", Arial;
+  margin-left: 20px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.grafiek-container {
+  width: 70%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* de container waar alle 6 de losse blokken meetgegevens in staan. */
+.cards-container {
+  display: grid;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  grid-template-columns: 150px 150px 150px;
+}
+
+/* De outer card blok (dus de icoon met rechts ervan de meetgegeven/label) */
+.card-outer {
+  display: grid;
+  align-items: center;
+  justify-items: space-between;
+  grid-template-columns: 40px auto;
+}
+
+.card-outer i {
+  font-size: 40px;
+}
+
+/* de inner card blok (dus met de meetgegeven en label eronder) */
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+/* In het losse blok meetgegevens specifiek de gegevens uit de JSON (bijvoorbeeld de temperatuur) */
+.card-waarde {
+  font-family: "Helvetica Neue", Arial;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--cyan);
+}
+
+/* In het losse blok de naam van de specifieke meetgegeven */
+.card-label {
+  font-size: 9px;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.stad-zoeker {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px
+}
+
+#stadInput {
+  height: 50px;
+  width: 100%;
+  padding-left: 25px;
+  background-color: var(--white);
+  border-radius: 25px;
+  border: 1px solid;
+  font-family: "Helvetica Neue", Arial;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.stad-opties {
+  display: none;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: var(--white);
+  border: 1px solid;
+  border-radius: 15px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.stad-opties li {
+  padding: 8px 25px;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Arial;
+  font-size: 16px;
+}
+
+.stad-opties li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Als het scherm minder breed is als 768px dan zal hetgeen hieronder toegepast worden. */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .form-stad {
+    margin-bottom: 20px;
+  }
+
+  .dropdown-stad {
+    height: 50px;
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .cards-container {
+    grid-template-columns: 120px 120px;
+    width: 90%;
+    gap: 10px;
+  }
+
+  /* De outer card blok (dus de icoon met rechts ervan de meetgegeven/label) */
+  .card-outer {
+    grid-template-columns: 40px auto;
+  }
+
+  /* de inner card blok (dus met de meetgegeven en label eronder) */
+  /* .card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+} */
+
+  /* In het losse blok meetgegevens specifiek de gegevens uit de JSON (bijvoorbeeld de temperatuur) */
+  .card-waarde {
+    font-family: "Helvetica Neue", Arial;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--cyan);
+  }
+
+  /* In het losse blok de naam van de specifieke meetgegeven */
+  .card-label {
+    font-size: 8px;
+    color: var(--black);
+    font-weight: bold;
+  }
+}
