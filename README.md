@@ -6,24 +6,24 @@
 - [x] Basis Blade view met tabel van alle stations (actueel.blade.php)
 
 ### 2. Gedeelde layout
-- [ ] Layout Blade template (navbar, CSS variabelen merkkleuren, fonts, Buienradar attributie)
-- [ ] Statische assets overzetten (logo, fonts, FontAwesome via CDN)
-- [ ] CSS custom properties voor de vier merkkleuren
-- [ ] Responsive grid en card layout basis
+- [x] Layout Blade template (navbar, CSS variabelen merkkleuren, fonts, Buienradar attributie)
+- [x] Statische assets overzetten (logo, fonts, FontAwesome via CDN)
+- [x] CSS custom properties voor de vier merkkleuren
+- [x] Responsive grid en card layout basis
 
 ### 3. Zoekveld (stad zoeker.js equivalent)
-- [ ] JS bestand met filterlogica op Regio
-- [ ] Toon alle stations bij focus op het veld
-- [ ] Verberg lijst bij klik buiten het component
-- [ ] Submit formulier met gekozen Station bij klik op een optie
-- [ ] Herbruikbare functie (bijvoorbeeld initStadZoeker(stations)) zodat beide pagina's hem kunnen gebruiken
+- [x] JS bestand met filterlogica op Regio
+- [x] Toon alle stations bij focus op het veld
+- [x] Verberg lijst bij klik buiten het component
+- [x] Submit formulier met gekozen Station bij klik op een optie
+- [x] Herbruikbare functie (bijvoorbeeld initStadZoeker(stations)) zodat beide pagina's hem kunnen gebruiken
 
 ### 4. Hoofdpagina (Index)
-- [ ] Route die /weerdata/actueel ophaalt
-- [ ] Zoekveld geintegreerd
-- [ ] Kaarten met temperatuur, gevoelstemperatuur, grondtemperatuur, zonkracht, regen laatste uur, windrichting
-- [ ] Foutafhandeling als de Backend niet bereikbaar is
-- [ ] Foutafhandeling als het gekozen station geen data heeft
+- [x] Route die /weerdata/actueel ophaalt
+- [x] Zoekveld geintegreerd
+- [x] Kaarten met temperatuur, gevoelstemperatuur, grondtemperatuur, zonkracht, regen laatste uur, windrichting
+- [x] Foutafhandeling als de Backend niet bereikbaar is
+- [x] Foutafhandeling als het gekozen station geen data heeft
 
 ### 5. Geschiedenispagina
 - [ ] Route die /weerdata/actueel ophaalt voor de stationlijst
