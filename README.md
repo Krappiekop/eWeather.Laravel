@@ -1,58 +1,40 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Laravel Frontend - To Do
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### 1. Projectopzet
+- [x] Laravel project aangemaakt (composer create-project laravel/laravel eWeather.Laravel)
+- [x] Backend koppeling getest via de Http facade (/weerdata/actueel)
+- [x] Basis Blade view met tabel van alle stations (actueel.blade.php)
 
-## About Laravel
+### 2. Gedeelde layout
+- [ ] Layout Blade template (navbar, CSS variabelen merkkleuren, fonts, Buienradar attributie)
+- [ ] Statische assets overzetten (logo, fonts, FontAwesome via CDN)
+- [ ] CSS custom properties voor de vier merkkleuren
+- [ ] Responsive grid en card layout basis
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 3. Zoekveld (stad zoeker.js equivalent)
+- [ ] JS bestand met filterlogica op Regio
+- [ ] Toon alle stations bij focus op het veld
+- [ ] Verberg lijst bij klik buiten het component
+- [ ] Submit formulier met gekozen Station bij klik op een optie
+- [ ] Herbruikbare functie (bijvoorbeeld initStadZoeker(stations)) zodat beide pagina's hem kunnen gebruiken
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 4. Hoofdpagina (Index)
+- [ ] Route die /weerdata/actueel ophaalt
+- [ ] Zoekveld geintegreerd
+- [ ] Kaarten met temperatuur, gevoelstemperatuur, grondtemperatuur, zonkracht, regen laatste uur, windrichting
+- [ ] Foutafhandeling als de Backend niet bereikbaar is
+- [ ] Foutafhandeling als het gekozen station geen data heeft
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 5. Geschiedenispagina
+- [ ] Route die /weerdata/actueel ophaalt voor de stationlijst
+- [ ] Route die /weerdata ophaalt met Station, StartDate en EndDate
+- [ ] Zoekveld hergebruikt
+- [ ] Datumvelden Van en Tot plus een submit knop
+- [ ] Tabel met tijdstip, temperatuur, gevoelstemperatuur, grondtemperatuur
+- [ ] Chart.js lijngrafiek met drie lijnen, y as vast van 0 tot 30, x as labels in MM DD HH mm formaat
+- [ ] Losse foutafhandeling per aanroep, actueel data apart van periode data
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 6. Navigatie en afronding
+- [ ] Navbar link tussen hoofdpagina en geschiedenispagina
+- [ ] Gelijktijdig starten van Backend (dotnet run) en Frontend (php artisan serve) vastleggen, eventueel via VS Code taken
+- [ ] Poorten vastleggen: Backend 5075, Frontend Laravel (standaard 8000, te bevestigen)

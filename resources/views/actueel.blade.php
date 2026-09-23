@@ -9,11 +9,22 @@
 <body>
     <h1>Actuele metingen</h1>
 
-    <ul>
+    <table>
+        <tr>
+            <th>Regio</th>
+            <th>Temperature</th>
+            <th>Feel temperature</th>
+            <th>Ground temperature</th>
+        </tr>
         @foreach ($stations as $station)
-            <li>{{ $station['station'] }}</li>
+        <tr>
+            <td>{{ $station['regio'] }}</td>
+            <td>{{ $station['temperature'] }}</td>
+            <td>{{ $station['feelTemperature'] }}</td>
+            <td>{{ $station['groundTemperature'] }}</td>
+        </tr>
         @endforeach
-    </ul>
+    </table>
 </body>
 
 </html>
