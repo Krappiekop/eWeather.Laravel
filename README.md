@@ -35,7 +35,13 @@
 - [x] Chart.js lijngrafiek met drie lijnen, y as vast van 0 tot 30, x as labels in MM DD HH mm formaat
 - [x] Losse foutafhandeling per aanroep, actueel data apart van periode data
 
-### 6. Navigatie en afronding
-- [ ] Navbar link tussen hoofdpagina en geschiedenispagina
-- [ ] Gelijktijdig starten van Backend (dotnet run) en Frontend (php artisan serve) vastleggen, eventueel via VS Code taken
-- [ ] Poorten vastleggen: Backend 5075, Frontend Laravel (standaard 8000, te bevestigen)
+### 6. Navigatie en structuur
+- [x] Navbar link tussen hoofdpagina en geschiedenispagina
+- [x] Gekozen station blijft behouden bij navigeren, via named routes en request()->query()
+- [x] Route logica verplaatst naar WeerController, met een herbruikbare private methode voor het ophalen van de actuele stations
+
+### 7. Ontwikkelomgeving starten
+Drie terminals tegelijk nodig:
+- Backend: dotnet run, in de map van eWeather.Backend, poort 5075
+- Frontend: php artisan serve, in de map van eWeather.Laravel, poort 8000
+- Vite (voor site.css en stad-zoeker.js): npm run dev, in dezelfde map, dev server op poort 5173
