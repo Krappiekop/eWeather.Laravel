@@ -28,7 +28,7 @@ Route::get('/actueel', function (Request $request) {
         'gekozenStation' => $gekozenStation,
         'gekozenPlek' => $gekozenPlek,
     ]);
-});
+})->name('actueel');
 
 Route::get('/geschiedenis', function (Request $request) {
     $foutmelding = null;
@@ -72,5 +72,5 @@ Route::get('/geschiedenis', function (Request $request) {
         'endDate' => $endDate,
         'periodeData' => $periodeData,
     ]);
-});
+})->name('geschiedenis');
 //controler maken van route naar /actueel

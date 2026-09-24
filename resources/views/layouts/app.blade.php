@@ -9,19 +9,24 @@
     @vite(['resources/css/site.css'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
+@php
+    $huidigStation = request()->query('GekozenWeerStation');
+@endphp
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/actueel') }}">
+                <a class="navbar-brand" href="{{ route('actueel', $huidigStation ? ['GekozenWeerStation' => $huidigStation] : []) }}">
                     <img class="logo" src="{{ asset('images/eweather-logo.png') }}" alt="eWeather logo">
                 </a>
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{{ url('/actueel') }}">Actueel</a>
+                        <a class="nav-link text-dark" href="{{ route('actueel', $huidigStation ? ['GekozenWeerStation' => $huidigStation] : []) }}">Actueel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{{ url('/geschiedenis') }}">Geschiedenis</a>
+                        <a class="nav-link text-dark" href="{{ route('geschiedenis', $huidigStation ? ['GekozenWeerStation' => $huidigStation] : []) }}">Geschiedenis</a>
                     </li>
                 </ul>
             </div>
