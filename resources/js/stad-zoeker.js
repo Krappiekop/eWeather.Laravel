@@ -40,3 +40,5 @@ function initStadZoeker(stations) {
         }
     });
 }
+
+window.initStadZoeker = initStadZoeker;

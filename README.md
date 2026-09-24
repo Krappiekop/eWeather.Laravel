@@ -17,6 +17,9 @@
 - [x] Verberg lijst bij klik buiten het component
 - [x] Submit formulier met gekozen Station bij klik op een optie
 - [x] Herbruikbare functie (bijvoorbeeld initStadZoeker(stations)) zodat beide pagina's hem kunnen gebruiken
+- [ ] .js en .css in recourses zetten ipv public.
+npm run dev
+npm run build
 
 ### 4. Hoofdpagina (Index)
 - [x] Route die /weerdata/actueel ophaalt

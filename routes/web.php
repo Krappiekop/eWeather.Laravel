@@ -29,3 +29,4 @@ Route::get('/actueel', function (Request $request) {
         'gekozenPlek' => $gekozenPlek,
     ]);
 });
+//controler maken van route naar /actueel

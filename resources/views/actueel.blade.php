@@ -80,7 +80,9 @@
 @section('scripts')
     @if ($stations->isNotEmpty())
         <script>
-            initStadZoeker(@json($stations->values()));
+            document.addEventListener('DOMContentLoaded', function () {
+                initStadZoeker(@json($stations->values()));
+            });
         </script>
     @endif
 @endsection
