@@ -18,8 +18,6 @@
 - [x] Submit formulier met gekozen Station bij klik op een optie
 - [x] Herbruikbare functie (bijvoorbeeld initStadZoeker(stations)) zodat beide pagina's hem kunnen gebruiken
 - [ ] .js en .css in recourses zetten ipv public.
-npm run dev
-npm run build
 
 ### 4. Hoofdpagina (Index)
 - [x] Route die /weerdata/actueel ophaalt
@@ -29,13 +27,13 @@ npm run build
 - [x] Foutafhandeling als het gekozen station geen data heeft
 
 ### 5. Geschiedenispagina
-- [ ] Route die /weerdata/actueel ophaalt voor de stationlijst
-- [ ] Route die /weerdata ophaalt met Station, StartDate en EndDate
-- [ ] Zoekveld hergebruikt
-- [ ] Datumvelden Van en Tot plus een submit knop
-- [ ] Tabel met tijdstip, temperatuur, gevoelstemperatuur, grondtemperatuur
-- [ ] Chart.js lijngrafiek met drie lijnen, y as vast van 0 tot 30, x as labels in MM DD HH mm formaat
-- [ ] Losse foutafhandeling per aanroep, actueel data apart van periode data
+- [x] Route die /weerdata/actueel ophaalt voor de stationlijst
+- [x] Route die /weerdata ophaalt met Station, StartDate en EndDate
+- [x] Zoekveld hergebruikt
+- [x] Datumvelden Van en Tot plus een submit knop
+- [x] Tabel met tijdstip, temperatuur, gevoelstemperatuur, grondtemperatuur
+- [x] Chart.js lijngrafiek met drie lijnen, y as vast van 0 tot 30, x as labels in MM DD HH mm formaat
+- [x] Losse foutafhandeling per aanroep, actueel data apart van periode data
 
 ### 6. Navigatie en afronding
 - [ ] Navbar link tussen hoofdpagina en geschiedenispagina
